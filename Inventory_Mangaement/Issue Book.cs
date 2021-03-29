@@ -25,6 +25,13 @@ namespace Inventory_Mangaement
             string query = "insert into BookIssue (PrsonName,PersonID,BookName,BookID,Date,Time) values ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
+ 
+            
+                string upquery = "Update Book_Entry Set Status='Occupied' where BookCode ='" + textBox4.Text + "'";
+                SqlDataAdapter SDB = new SqlDataAdapter(upquery, con);
+                SDB.SelectCommand.ExecuteNonQuery();
+            
+
             con.Close();
             textBox1.Text = "";
             textBox2.Text = "";
@@ -95,6 +102,16 @@ namespace Inventory_Mangaement
             textBox5.Text = "";
             textBox6.Text = "";
             MessageBox.Show("Record Succussfully Deleted");
+        }
+
+        private void Library_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

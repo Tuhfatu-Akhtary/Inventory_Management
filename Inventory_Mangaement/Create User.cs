@@ -58,7 +58,7 @@ namespace Inventory_Mangaement
             {
                 MessageBox.Show("You have entered wrong OTP");
             }
-            String infoquery = "Insert into Login(UserName,Password,Email) Select Username,Password,Email from Registration Where Status ='Verified'";
+            String infoquery = "Insert into Login(UserName,Password,Email) Select Username,Password,Email from Registration Where Status ='Verified' And Email='"+EmailT.Text+"'";
             SqlDataAdapter cmd = new SqlDataAdapter(infoquery, con);
             cmd.SelectCommand.ExecuteNonQuery();
 

@@ -72,17 +72,18 @@ namespace Inventory_Mangaement
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(601, 437);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(915, 60);
+            this.label2.Location = new System.Drawing.Point(859, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 44);
+            this.label2.Size = new System.Drawing.Size(313, 44);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Book List";
+            this.label2.Text = "Issued Book List";
             // 
             // label3
             // 
@@ -277,7 +278,8 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Name = "Library";
-            this.Text = "Library";
+            this.Text = "Issue Book";
+            this.Load += new System.EventHandler(this.Library_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

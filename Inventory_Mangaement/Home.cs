@@ -12,6 +12,7 @@ namespace Inventory_Mangaement
 {
     public partial class Home : Form
     {
+        int i = 1;
         public Home()
         {
             InitializeComponent();
@@ -35,6 +36,9 @@ namespace Inventory_Mangaement
         private void Home_Load(object sender, EventArgs e)
         {
             DropDown.Height = 37;
+            DropDown1.Height = 37;
+            Dropdown3.Hide();
+
 
         }
 
@@ -77,9 +81,14 @@ namespace Inventory_Mangaement
 
         private void LoginH_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            Login log = new Login();
-            log.Show();
+            if (DropDown1.Height == 177)
+            {
+                DropDown1.Height = 37;
+            }
+            else
+            {
+                DropDown1.Height = 177;
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -139,9 +148,15 @@ namespace Inventory_Mangaement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Library L = new Library();
-            L.Show();
+            i++;
+            if (i % 2 != 0)
+            {
+                Dropdown3.Show();
+            }
+            else
+            {
+                Dropdown3.Hide();
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -149,6 +164,48 @@ namespace Inventory_Mangaement
             this.Hide();
             Settings set = new Settings();
             set.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Damaged_product_report dr = new Damaged_product_report();
+            dr.Show();
+        }
+
+        private void DropDown1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void IssueB_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Library L = new Library();
+            L.Show();
+        }
+
+        private void EntryB_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Book_Entry BE = new Book_Entry();
+            BE.Show();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Products_Report pr = new Products_Report();
+            pr.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Books_Report br = new Books_Report();
+            br.Show();
         }
     }
 }
