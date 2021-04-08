@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Inventory_Mangaement
 {
     public partial class Login : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=inventory_managementdb;Integrated Security=True");
+        string cs = ConfigurationManager.ConnectionStrings["Inventory_Mangaement.Properties.Settings.inventory_managementdbConnectionString"].ConnectionString;
         int count = 0;
         public Login()
         {
@@ -22,6 +23,8 @@ namespace Inventory_Mangaement
 
         private void LoginB_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(cs);
+            con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from Login where UserName='"+Username.Text+"' and Password='"+Password.Text+"'";
@@ -41,6 +44,7 @@ namespace Inventory_Mangaement
                 Home Hm = new Home();
                 Hm.Show();
             }
+            con.Close();
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -50,6 +54,7 @@ namespace Inventory_Mangaement
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            SqlConnection con = new SqlConnection(cs);
             if (con.State == ConnectionState.Open)
             {
                 con.Close();

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.inventory_managementdbDataSet1 = new Inventory_Mangaement.inventory_managementdbDataSet1();
             this.Book_EntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -41,9 +41,9 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "Books";
-            reportDataSource1.Value = this.Book_EntryBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "Books";
+            reportDataSource2.Value = this.Book_EntryBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Inventory_Mangaement.Books.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -72,6 +72,7 @@
             this.ClientSize = new System.Drawing.Size(860, 655);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Books_Report";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Books_Report";
             this.Load += new System.EventHandler(this.Books_Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventory_managementdbDataSet1)).EndInit();

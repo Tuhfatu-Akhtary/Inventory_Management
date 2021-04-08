@@ -30,6 +30,7 @@ namespace Inventory_Mangaement
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Forgot = new System.Windows.Forms.Label();
             this.ShowPass = new System.Windows.Forms.Button();
             this.HidePass = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace Inventory_Mangaement
             this.LoginB = new System.Windows.Forms.Button();
             this.Password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Forgot = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,18 @@ namespace Inventory_Mangaement
             this.panel1.Size = new System.Drawing.Size(560, 595);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Forgot
+            // 
+            this.Forgot.AutoSize = true;
+            this.Forgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Forgot.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Forgot.Location = new System.Drawing.Point(272, 399);
+            this.Forgot.Name = "Forgot";
+            this.Forgot.Size = new System.Drawing.Size(161, 20);
+            this.Forgot.TabIndex = 2;
+            this.Forgot.Text = "Forgot Password?";
+            this.Forgot.Click += new System.EventHandler(this.Forgot_Click);
             // 
             // ShowPass
             // 
@@ -101,7 +113,7 @@ namespace Inventory_Mangaement
             this.Username.Location = new System.Drawing.Point(127, 263);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(306, 22);
-            this.Username.TabIndex = 7;
+            this.Username.TabIndex = 0;
             // 
             // label3
             // 
@@ -155,18 +167,6 @@ namespace Inventory_Mangaement
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
-            // Forgot
-            // 
-            this.Forgot.AutoSize = true;
-            this.Forgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Forgot.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Forgot.Location = new System.Drawing.Point(272, 399);
-            this.Forgot.Name = "Forgot";
-            this.Forgot.Size = new System.Drawing.Size(161, 20);
-            this.Forgot.TabIndex = 11;
-            this.Forgot.Text = "Forgot Password?";
-            this.Forgot.Click += new System.EventHandler(this.Forgot_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,6 +176,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);

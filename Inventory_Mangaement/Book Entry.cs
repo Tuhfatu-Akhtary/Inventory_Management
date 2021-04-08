@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Inventory_Mangaement
 {
     public partial class Book_Entry : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=inventory_managementdb;Integrated Security=True");
+        string cs = ConfigurationManager.ConnectionStrings["Inventory_Mangaement.Properties.Settings.inventory_managementdbConnectionString"].ConnectionString;
+        
+
         public Book_Entry()
         {
             InitializeComponent();
+           
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -28,6 +32,7 @@ namespace Inventory_Mangaement
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(cs);
             con.Open();
             string query = "Insert into Book_Entry (BookCode,BookName,AuthorName,Edition,EntryDate,Status) values ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "',' Available')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
@@ -45,6 +50,7 @@ namespace Inventory_Mangaement
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(cs);
             con.Open();
             String query = "Select * From Book_Entry";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
@@ -56,6 +62,7 @@ namespace Inventory_Mangaement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(cs);
             con.Open();
             String query = "Delete From Book_Entry Where BookCode ='" + textBox1.Text + "'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
@@ -71,8 +78,9 @@ namespace Inventory_Mangaement
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(cs);
             con.Open();
-            String query = "Update Book_Entry SET BookName = '" + textBox2.Text + "',AuthorName ='" + textBox3.Text + "' ,Edition = '" + textBox4.Text + "',EntryDate ='" + textBox5.Text + "' , Where BookCode ='" + textBox1.Text + "'";
+            String query = "Update Book_Entry SET BookName = '" + textBox2.Text + "',AuthorName ='" + textBox3.Text + "' ,Edition = '" + textBox4.Text + "',EntryDate ='" + textBox5.Text + "' Where BookCode ='" + textBox1.Text + "'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();

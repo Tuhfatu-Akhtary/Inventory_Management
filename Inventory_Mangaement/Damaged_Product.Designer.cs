@@ -259,6 +259,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Name = "Damaged_Product";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Damaged_Product";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

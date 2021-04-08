@@ -59,8 +59,6 @@ namespace Inventory_Mangaement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
             con.Open();
             if(New.Text==Confirm.Text)
             {
@@ -68,6 +66,10 @@ namespace Inventory_Mangaement
                 String query = "Update Login SET Password = '" + Confirm.Text + "' Where UserName  ='" + textBox1.Text + "'";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
+
+                String changequery = "Update Registration SET Password = '" + Confirm.Text + "' Where Username  ='" + textBox1.Text + "'";
+                SqlDataAdapter SDB = new SqlDataAdapter(changequery, con);
+                SDB.SelectCommand.ExecuteNonQuery();
                 MessageBox.Show("Password Updated Successfully.");
 
                 this.Hide();

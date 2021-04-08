@@ -31,6 +31,10 @@ namespace Inventory_Mangaement
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SendEmail = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Show1 = new System.Windows.Forms.Button();
+            this.Hide1 = new System.Windows.Forms.Button();
             this.UsernameT = new System.Windows.Forms.TextBox();
             this.PasswordT = new System.Windows.Forms.TextBox();
             this.ActivationCode = new System.Windows.Forms.TextBox();
@@ -55,10 +59,6 @@ namespace Inventory_Mangaement
             this.label2 = new System.Windows.Forms.Label();
             this.Edit = new System.Windows.Forms.Button();
             this.View = new System.Windows.Forms.Button();
-            this.Hide1 = new System.Windows.Forms.Button();
-            this.Show1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.SendEmail = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +102,57 @@ namespace Inventory_Mangaement
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // SendEmail
+            // 
+            this.SendEmail.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SendEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SendEmail.Location = new System.Drawing.Point(241, 582);
+            this.SendEmail.Name = "SendEmail";
+            this.SendEmail.Size = new System.Drawing.Size(209, 57);
+            this.SendEmail.TabIndex = 27;
+            this.SendEmail.Text = "Send Email";
+            this.SendEmail.UseVisualStyleBackColor = false;
+            this.SendEmail.Click += new System.EventHandler(this.SendEmail_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(387, 532);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(179, 24);
+            this.checkBox1.TabIndex = 26;
+            this.checkBox1.Text = "Generate Password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // Show1
+            // 
+            this.Show1.FlatAppearance.BorderSize = 0;
+            this.Show1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.Show1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Show1.Location = new System.Drawing.Point(499, 503);
+            this.Show1.Name = "Show1";
+            this.Show1.Size = new System.Drawing.Size(70, 23);
+            this.Show1.TabIndex = 24;
+            this.Show1.Text = "Show";
+            this.Show1.UseVisualStyleBackColor = true;
+            this.Show1.Click += new System.EventHandler(this.Show1_Click);
+            // 
+            // Hide1
+            // 
+            this.Hide1.FlatAppearance.BorderSize = 0;
+            this.Hide1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.Hide1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Hide1.Location = new System.Drawing.Point(499, 503);
+            this.Hide1.Name = "Hide1";
+            this.Hide1.Size = new System.Drawing.Size(70, 23);
+            this.Hide1.TabIndex = 22;
+            this.Hide1.Text = "Hide";
+            this.Hide1.UseVisualStyleBackColor = true;
+            this.Hide1.Click += new System.EventHandler(this.Hide_Click);
+            // 
             // UsernameT
             // 
             this.UsernameT.Location = new System.Drawing.Point(172, 448);
@@ -121,7 +172,6 @@ namespace Inventory_Mangaement
             // 
             this.ActivationCode.Location = new System.Drawing.Point(175, 679);
             this.ActivationCode.Name = "ActivationCode";
-            this.ActivationCode.PasswordChar = '*';
             this.ActivationCode.Size = new System.Drawing.Size(394, 22);
             this.ActivationCode.TabIndex = 19;
             // 
@@ -356,57 +406,6 @@ namespace Inventory_Mangaement
             this.View.UseVisualStyleBackColor = false;
             this.View.Click += new System.EventHandler(this.View_Click);
             // 
-            // Hide1
-            // 
-            this.Hide1.FlatAppearance.BorderSize = 0;
-            this.Hide1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.Hide1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Hide1.Location = new System.Drawing.Point(499, 503);
-            this.Hide1.Name = "Hide1";
-            this.Hide1.Size = new System.Drawing.Size(70, 23);
-            this.Hide1.TabIndex = 22;
-            this.Hide1.Text = "Hide";
-            this.Hide1.UseVisualStyleBackColor = true;
-            this.Hide1.Click += new System.EventHandler(this.Hide_Click);
-            // 
-            // Show1
-            // 
-            this.Show1.FlatAppearance.BorderSize = 0;
-            this.Show1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.Show1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Show1.Location = new System.Drawing.Point(499, 503);
-            this.Show1.Name = "Show1";
-            this.Show1.Size = new System.Drawing.Size(70, 23);
-            this.Show1.TabIndex = 24;
-            this.Show1.Text = "Show";
-            this.Show1.UseVisualStyleBackColor = true;
-            this.Show1.Click += new System.EventHandler(this.Show1_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(387, 532);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(179, 24);
-            this.checkBox1.TabIndex = 26;
-            this.checkBox1.Text = "Generate Password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // SendEmail
-            // 
-            this.SendEmail.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SendEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SendEmail.Location = new System.Drawing.Point(241, 582);
-            this.SendEmail.Name = "SendEmail";
-            this.SendEmail.Size = new System.Drawing.Size(209, 57);
-            this.SendEmail.TabIndex = 27;
-            this.SendEmail.Text = "Send Email";
-            this.SendEmail.UseVisualStyleBackColor = false;
-            this.SendEmail.Click += new System.EventHandler(this.SendEmail_Click);
-            // 
             // Create_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,6 +420,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Name = "Create_User";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create User";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

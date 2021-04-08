@@ -90,7 +90,7 @@ namespace Inventory_Mangaement
             this.New.Name = "New";
             this.New.PasswordChar = '*';
             this.New.Size = new System.Drawing.Size(276, 22);
-            this.New.TabIndex = 4;
+            this.New.TabIndex = 2;
             // 
             // Confirm
             // 
@@ -98,7 +98,7 @@ namespace Inventory_Mangaement
             this.Confirm.Name = "Confirm";
             this.Confirm.PasswordChar = '*';
             this.Confirm.Size = new System.Drawing.Size(276, 22);
-            this.Confirm.TabIndex = 5;
+            this.Confirm.TabIndex = 3;
             this.Confirm.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Hide1
@@ -155,9 +155,8 @@ namespace Inventory_Mangaement
             // 
             this.textBox1.Location = new System.Drawing.Point(236, 143);
             this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(276, 22);
-            this.textBox1.TabIndex = 11;
+            this.textBox1.TabIndex = 1;
             // 
             // Reset_Password
             // 
@@ -177,6 +176,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Reset_Password";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reset_Password";
             this.Load += new System.EventHandler(this.Reset_Password_Load);
             this.ResumeLayout(false);

@@ -289,6 +289,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.l);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Borrow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Borrow";
             this.Load += new System.EventHandler(this.Borrow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

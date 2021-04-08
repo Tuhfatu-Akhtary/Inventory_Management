@@ -30,7 +30,7 @@ namespace Inventory_Mangaement
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.inventory_managementdbDataSet2 = new Inventory_Mangaement.inventory_managementdbDataSet2();
             this.Manage_StockBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -42,9 +42,9 @@ namespace Inventory_Mangaement
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "Products";
-            reportDataSource1.Value = this.Manage_StockBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "Products";
+            reportDataSource2.Value = this.Manage_StockBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Inventory_Mangaement.Products.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -73,6 +73,7 @@ namespace Inventory_Mangaement
             this.ClientSize = new System.Drawing.Size(885, 654);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Products_Report";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Products_Report";
             this.Load += new System.EventHandler(this.Products_Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventory_managementdbDataSet2)).EndInit();

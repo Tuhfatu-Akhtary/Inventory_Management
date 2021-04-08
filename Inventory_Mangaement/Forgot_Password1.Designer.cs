@@ -118,6 +118,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Name = "Forgot_Password1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forgot_Password1";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -225,6 +225,7 @@ namespace Inventory_Mangaement
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(606, 400);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
             // label2
@@ -289,6 +290,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Name = "Manage_Stock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage_Stock";
             this.Load += new System.EventHandler(this.Manage_Stock_Load);
             this.panel1.ResumeLayout(false);

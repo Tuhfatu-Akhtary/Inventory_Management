@@ -31,13 +31,23 @@ namespace Inventory_Mangaement
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.inventory_managementdbDataSet = new Inventory_Mangaement.inventory_managementdbDataSet();
             this.Damaged_ProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventory_managementdbDataSet = new Inventory_Mangaement.inventory_managementdbDataSet();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Damaged_ProductTableAdapter = new Inventory_Mangaement.inventory_managementdbDataSetTableAdapters.Damaged_ProductTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.inventory_managementdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Damaged_ProductBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventory_managementdbDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Damaged_ProductBindingSource
+            // 
+            this.Damaged_ProductBindingSource.DataMember = "Damaged_Product";
+            this.Damaged_ProductBindingSource.DataSource = this.inventory_managementdbDataSet;
+            // 
+            // inventory_managementdbDataSet
+            // 
+            this.inventory_managementdbDataSet.DataSetName = "inventory_managementdbDataSet";
+            this.inventory_managementdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer2
             // 
@@ -53,16 +63,6 @@ namespace Inventory_Mangaement
             this.reportViewer2.TabIndex = 1;
             this.reportViewer2.Load += new System.EventHandler(this.reportViewer2_Load);
             // 
-            // inventory_managementdbDataSet
-            // 
-            this.inventory_managementdbDataSet.DataSetName = "inventory_managementdbDataSet";
-            this.inventory_managementdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Damaged_ProductBindingSource
-            // 
-            this.Damaged_ProductBindingSource.DataMember = "Damaged_Product";
-            this.Damaged_ProductBindingSource.DataSource = this.inventory_managementdbDataSet;
-            // 
             // Damaged_ProductTableAdapter
             // 
             this.Damaged_ProductTableAdapter.ClearBeforeFill = true;
@@ -74,10 +74,11 @@ namespace Inventory_Mangaement
             this.ClientSize = new System.Drawing.Size(687, 559);
             this.Controls.Add(this.reportViewer2);
             this.Name = "Damaged_product_report";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Damaged_product_report";
             this.Load += new System.EventHandler(this.Damaged_product_report_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.inventory_managementdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Damaged_ProductBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventory_managementdbDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

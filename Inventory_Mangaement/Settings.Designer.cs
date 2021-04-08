@@ -62,6 +62,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Settings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.ResumeLayout(false);
 

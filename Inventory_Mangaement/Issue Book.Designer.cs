@@ -278,6 +278,7 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Name = "Library";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Issue Book";
             this.Load += new System.EventHandler(this.Library_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

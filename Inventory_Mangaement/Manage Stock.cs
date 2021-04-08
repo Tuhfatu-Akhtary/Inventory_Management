@@ -121,5 +121,10 @@ namespace Inventory_Mangaement
             textBox1.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
