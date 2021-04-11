@@ -37,7 +37,6 @@ namespace Inventory_Mangaement
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.HomeH = new System.Windows.Forms.Button();
-            this.ContactH = new System.Windows.Forms.Button();
             this.Statement = new System.Windows.Forms.Button();
             this.DropDown = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -52,13 +51,18 @@ namespace Inventory_Mangaement
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.DropDown1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.Dropdown4 = new System.Windows.Forms.Panel();
+            this.PlistBtn = new System.Windows.Forms.Button();
+            this.Info = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Dropdown3.SuspendLayout();
             this.DropDown.SuspendLayout();
             this.DropDown1.SuspendLayout();
+            this.Dropdown4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -153,28 +157,13 @@ namespace Inventory_Mangaement
             this.HomeH.FlatAppearance.BorderSize = 0;
             this.HomeH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.HomeH.Location = new System.Drawing.Point(766, 116);
+            this.HomeH.Location = new System.Drawing.Point(742, 121);
             this.HomeH.Name = "HomeH";
             this.HomeH.Size = new System.Drawing.Size(115, 38);
             this.HomeH.TabIndex = 1;
             this.HomeH.Text = "Home";
             this.HomeH.UseVisualStyleBackColor = false;
             this.HomeH.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // ContactH
-            // 
-            this.ContactH.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ContactH.FlatAppearance.BorderSize = 0;
-            this.ContactH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ContactH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.ContactH.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ContactH.Location = new System.Drawing.Point(900, 119);
-            this.ContactH.Name = "ContactH";
-            this.ContactH.Size = new System.Drawing.Size(148, 38);
-            this.ContactH.TabIndex = 2;
-            this.ContactH.Text = "Contact";
-            this.ContactH.UseVisualStyleBackColor = false;
-            this.ContactH.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // Statement
             // 
@@ -193,6 +182,7 @@ namespace Inventory_Mangaement
             // 
             // DropDown
             // 
+            this.DropDown.Controls.Add(this.button14);
             this.DropDown.Controls.Add(this.button6);
             this.DropDown.Controls.Add(this.button4);
             this.DropDown.Controls.Add(this.button3);
@@ -200,7 +190,7 @@ namespace Inventory_Mangaement
             this.DropDown.Controls.Add(this.button1);
             this.DropDown.Location = new System.Drawing.Point(1054, 119);
             this.DropDown.Name = "DropDown";
-            this.DropDown.Size = new System.Drawing.Size(195, 206);
+            this.DropDown.Size = new System.Drawing.Size(195, 274);
             this.DropDown.TabIndex = 6;
             this.DropDown.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -369,19 +359,19 @@ namespace Inventory_Mangaement
             this.DropDown1.TabIndex = 7;
             this.DropDown1.Paint += new System.Windows.Forms.PaintEventHandler(this.DropDown1_Paint);
             // 
-            // button5
+            // button13
             // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(3, 137);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(208, 37);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Damaged Stock";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button13.BackColor = System.Drawing.Color.Black;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(0, 46);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(208, 37);
+            this.button13.TabIndex = 7;
+            this.button13.Text = "Products";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
@@ -397,19 +387,71 @@ namespace Inventory_Mangaement
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // button13
+            // button5
             // 
-            this.button13.BackColor = System.Drawing.Color.Black;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(0, 46);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(208, 37);
-            this.button13.TabIndex = 7;
-            this.button13.Text = "Products";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(3, 137);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(208, 37);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Damaged Stock";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // Dropdown4
+            // 
+            this.Dropdown4.BackColor = System.Drawing.Color.Black;
+            this.Dropdown4.Controls.Add(this.PlistBtn);
+            this.Dropdown4.Controls.Add(this.Info);
+            this.Dropdown4.Location = new System.Drawing.Point(863, 119);
+            this.Dropdown4.Name = "Dropdown4";
+            this.Dropdown4.Size = new System.Drawing.Size(188, 87);
+            this.Dropdown4.TabIndex = 5;
+            // 
+            // PlistBtn
+            // 
+            this.PlistBtn.BackColor = System.Drawing.Color.Black;
+            this.PlistBtn.FlatAppearance.BorderSize = 0;
+            this.PlistBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlistBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlistBtn.Location = new System.Drawing.Point(-4, 46);
+            this.PlistBtn.Name = "PlistBtn";
+            this.PlistBtn.Size = new System.Drawing.Size(189, 37);
+            this.PlistBtn.TabIndex = 2;
+            this.PlistBtn.Text = "Product List";
+            this.PlistBtn.UseVisualStyleBackColor = false;
+            this.PlistBtn.Click += new System.EventHandler(this.PlistBtn_Click);
+            // 
+            // Info
+            // 
+            this.Info.BackColor = System.Drawing.Color.Black;
+            this.Info.FlatAppearance.BorderSize = 0;
+            this.Info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Info.Location = new System.Drawing.Point(0, 0);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(189, 37);
+            this.Info.TabIndex = 1;
+            this.Info.Text = "Info";
+            this.Info.UseVisualStyleBackColor = false;
+            this.Info.Click += new System.EventHandler(this.Info_Click);
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Black;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(0, 209);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(195, 37);
+            this.button14.TabIndex = 6;
+            this.button14.Text = "Key";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Home
             // 
@@ -417,6 +459,7 @@ namespace Inventory_Mangaement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1445, 841);
+            this.Controls.Add(this.Dropdown4);
             this.Controls.Add(this.DropDown1);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -425,7 +468,6 @@ namespace Inventory_Mangaement
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DropDown);
-            this.Controls.Add(this.ContactH);
             this.Controls.Add(this.HomeH);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -440,6 +482,7 @@ namespace Inventory_Mangaement
             this.Dropdown3.ResumeLayout(false);
             this.DropDown.ResumeLayout(false);
             this.DropDown1.ResumeLayout(false);
+            this.Dropdown4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,7 +495,6 @@ namespace Inventory_Mangaement
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Create_User;
         private System.Windows.Forms.Button HomeH;
-        private System.Windows.Forms.Button ContactH;
         private System.Windows.Forms.Button Statement;
         private System.Windows.Forms.Panel DropDown;
         private System.Windows.Forms.Button button1;
@@ -473,5 +515,9 @@ namespace Inventory_Mangaement
         private System.Windows.Forms.Button EntryB;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Panel Dropdown4;
+        private System.Windows.Forms.Button PlistBtn;
+        private System.Windows.Forms.Button Info;
+        private System.Windows.Forms.Button button14;
     }
 }

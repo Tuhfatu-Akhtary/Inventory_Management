@@ -147,11 +147,11 @@ namespace Inventory_Mangaement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 38);
+            this.label1.Location = new System.Drawing.Point(104, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 44);
+            this.label1.Size = new System.Drawing.Size(446, 44);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Damaged Product";
+            this.label1.Text = "Damaged Product Entry";
             // 
             // Pname
             // 

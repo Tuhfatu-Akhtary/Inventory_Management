@@ -36,10 +36,8 @@ namespace Inventory_Mangaement
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Quantity = new System.Windows.Forms.TextBox();
-            this.ItemCode = new System.Windows.Forms.TextBox();
             this.PhoneNo = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.Label();
-            this.Email = new System.Windows.Forms.Label();
             this.Username = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.itemname = new System.Windows.Forms.TextBox();
@@ -62,10 +60,8 @@ namespace Inventory_Mangaement
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.Quantity);
-            this.panel1.Controls.Add(this.ItemCode);
             this.panel1.Controls.Add(this.PhoneNo);
             this.panel1.Controls.Add(this.Address);
-            this.panel1.Controls.Add(this.Email);
             this.panel1.Controls.Add(this.Username);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.itemname);
@@ -78,21 +74,21 @@ namespace Inventory_Mangaement
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(169, 393);
+            this.textBox2.Location = new System.Drawing.Point(198, 393);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(394, 22);
             this.textBox2.TabIndex = 20;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 326);
+            this.textBox1.Location = new System.Drawing.Point(198, 326);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(394, 22);
             this.textBox1.TabIndex = 19;
             // 
             // Price
             // 
-            this.Price.Location = new System.Drawing.Point(169, 266);
+            this.Price.Location = new System.Drawing.Point(198, 254);
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(394, 22);
             this.Price.TabIndex = 18;
@@ -119,24 +115,16 @@ namespace Inventory_Mangaement
             // 
             // Quantity
             // 
-            this.Quantity.Location = new System.Drawing.Point(169, 207);
+            this.Quantity.Location = new System.Drawing.Point(198, 182);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(394, 22);
             this.Quantity.TabIndex = 12;
-            // 
-            // ItemCode
-            // 
-            this.ItemCode.Location = new System.Drawing.Point(169, 151);
-            this.ItemCode.Name = "ItemCode";
-            this.ItemCode.Size = new System.Drawing.Size(394, 22);
-            this.ItemCode.TabIndex = 11;
-            this.ItemCode.TextChanged += new System.EventHandler(this.ItemCode_TextChanged);
             // 
             // PhoneNo
             // 
             this.PhoneNo.AutoSize = true;
             this.PhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNo.Location = new System.Drawing.Point(22, 207);
+            this.PhoneNo.Location = new System.Drawing.Point(22, 175);
             this.PhoneNo.Name = "PhoneNo";
             this.PhoneNo.Size = new System.Drawing.Size(100, 29);
             this.PhoneNo.TabIndex = 10;
@@ -146,21 +134,11 @@ namespace Inventory_Mangaement
             // 
             this.Address.AutoSize = true;
             this.Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(22, 266);
+            this.Address.Location = new System.Drawing.Point(26, 247);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(69, 29);
             this.Address.TabIndex = 9;
             this.Address.Text = "Price";
-            // 
-            // Email
-            // 
-            this.Email.AutoSize = true;
-            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(22, 151);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(124, 29);
-            this.Email.TabIndex = 8;
-            this.Email.Text = "Item Code";
             // 
             // Username
             // 
@@ -168,23 +146,23 @@ namespace Inventory_Mangaement
             this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Username.Location = new System.Drawing.Point(22, 94);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(130, 29);
+            this.Username.Size = new System.Drawing.Size(167, 29);
             this.Username.TabIndex = 7;
-            this.Username.Text = "Item Name";
+            this.Username.Text = "Product Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(194, 0);
+            this.label1.Location = new System.Drawing.Point(190, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 44);
+            this.label1.Size = new System.Drawing.Size(263, 44);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Manage Stock";
+            this.label1.Text = "Product Entry";
             // 
             // itemname
             // 
-            this.itemname.Location = new System.Drawing.Point(169, 94);
+            this.itemname.Location = new System.Drawing.Point(198, 101);
             this.itemname.Name = "itemname";
             this.itemname.Size = new System.Drawing.Size(394, 22);
             this.itemname.TabIndex = 1;
@@ -232,11 +210,11 @@ namespace Inventory_Mangaement
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(982, 60);
+            this.label2.Location = new System.Drawing.Point(935, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 44);
+            this.label2.Size = new System.Drawing.Size(293, 44);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Item Details";
+            this.label2.Text = "Product Details";
             // 
             // button1
             // 
@@ -308,10 +286,8 @@ namespace Inventory_Mangaement
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Quantity;
-        private System.Windows.Forms.TextBox ItemCode;
         private System.Windows.Forms.Label PhoneNo;
         private System.Windows.Forms.Label Address;
-        private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label Username;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox itemname;

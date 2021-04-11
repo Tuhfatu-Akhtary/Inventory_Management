@@ -33,12 +33,11 @@ namespace Inventory_Mangaement
         private void Submit_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "insert into Manage_Stock (ItemName,ItemCode,Quantity,Price,PurchaseDate,EntryDate) values ('"+itemname.Text+"','"+ItemCode.Text+"','"+Quantity.Text+"','"+Price.Text+"','"+ textBox1.Text+ "','" + textBox2.Text + "')";
+            string query = "insert into Manage_Stock (ItemName,Quantity,Price,PurchaseDate,EntryDate) values ('"+itemname.Text+"','"+Quantity.Text+"','"+Price.Text+"','"+ textBox1.Text+ "','" + textBox2.Text + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
             itemname.Text = "";
-            ItemCode.Text = "";
             Quantity.Text = "";
             Price.Text = "";
             textBox1.Text = "";
@@ -82,12 +81,11 @@ namespace Inventory_Mangaement
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "Delete From Manage_Stock Where ItemCode ='" + ItemCode.Text + "'";
+            String query = "Delete From Manage_Stock Where ItemName ='" + itemname.Text + "'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
             itemname.Text = "";
-            ItemCode.Text = "";
             Quantity.Text = "";
             Price.Text = "";
             textBox1.Text = "";
@@ -99,12 +97,11 @@ namespace Inventory_Mangaement
         private void button3_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "Update Manage_Stock SET ItemName = '" + itemname.Text + "',Quantity ='" + Quantity.Text + "' ,Price = '" + Price.Text + "',PurchaseDate ='" + textBox1.Text + "' ,EntryDate = '" + textBox2.Text + "' Where ItemCode ='" + ItemCode.Text + "'";
+            String query = "Update Manage_Stock SET Quantity ='" + Quantity.Text + "' ,Price = '" + Price.Text + "',PurchaseDate ='" + textBox1.Text + "' ,EntryDate = '" + textBox2.Text + "' Where ItemName = '" + itemname.Text + "'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
             itemname.Text = "";
-            ItemCode.Text = "";
             Quantity.Text = "";
             Price.Text = "";
             textBox1.Text = "";
@@ -115,11 +112,10 @@ namespace Inventory_Mangaement
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             itemname.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            ItemCode.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            Quantity.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            Price.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            textBox2.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            Quantity.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            Price.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

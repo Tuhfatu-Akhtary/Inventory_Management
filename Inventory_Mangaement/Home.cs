@@ -37,6 +37,7 @@ namespace Inventory_Mangaement
         {
             DropDown.Height = 37;
             DropDown1.Height = 37;
+            Dropdown4.Height = 37;
             Dropdown3.Hide();
 
 
@@ -98,13 +99,13 @@ namespace Inventory_Mangaement
 
         private void button1_Click_3(object sender, EventArgs e)
         {
-            if(DropDown.Height==206)
+            if(DropDown.Height==274)
             {
                 DropDown.Height = 37;
             }
             else
             {
-                DropDown.Height = 206;
+                DropDown.Height = 274;
             }
         }
 
@@ -206,6 +207,33 @@ namespace Inventory_Mangaement
         {
             Books_Report br = new Books_Report();
             br.Show();
+        }
+
+        private void Info_Click(object sender, EventArgs e)
+        {
+            if (Dropdown4.Height == 87)
+            {
+                Dropdown4.Height = 37;
+            }
+            else
+            {
+                Dropdown4.Height = 87;
+            }
+
+        }
+
+        private void PlistBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Product_List pl = new Product_List();
+            pl.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Key key = new Key();
+            key.Show();
         }
     }
 }
