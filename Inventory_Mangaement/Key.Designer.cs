@@ -325,7 +325,7 @@ namespace Inventory_Mangaement
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(209, 57);
             this.button5.TabIndex = 49;
-            this.button5.Text = "Add";
+            this.button5.Text = "Add Key";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
