@@ -49,6 +49,7 @@ namespace Inventory_Mangaement
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,11 +101,11 @@ namespace Inventory_Mangaement
             this.Submit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Submit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Submit.Location = new System.Drawing.Point(257, 579);
+            this.Submit.Location = new System.Drawing.Point(258, 452);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(209, 57);
             this.Submit.TabIndex = 6;
-            this.Submit.Text = "Submit";
+            this.Submit.Text = "Issue";
             this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
@@ -193,19 +194,19 @@ namespace Inventory_Mangaement
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(101, 405);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 29);
+            this.label6.Size = new System.Drawing.Size(132, 29);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Date";
+            this.label6.Text = "Issue Time";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(101, 466);
+            this.label7.Location = new System.Drawing.Point(101, 529);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 29);
+            this.label7.Size = new System.Drawing.Size(146, 29);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Time";
+            this.label7.Text = "Return Time";
             // 
             // textBox2
             // 
@@ -237,7 +238,7 @@ namespace Inventory_Mangaement
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(288, 466);
+            this.textBox6.Location = new System.Drawing.Point(288, 536);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(306, 22);
             this.textBox6.TabIndex = 20;
@@ -252,11 +253,25 @@ namespace Inventory_Mangaement
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(257, 579);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(209, 57);
+            this.button5.TabIndex = 22;
+            this.button5.Text = "Return";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1423, 689);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -308,5 +323,6 @@ namespace Inventory_Mangaement
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -20,6 +20,7 @@ namespace Inventory_Mangaement
         public Create_User()
         {
             InitializeComponent();
+            IDlabel.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -124,7 +125,7 @@ namespace Inventory_Mangaement
         private void View_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "Select Fullname,Email,PhoneNo,Address,Category,Username,Password,Status From Registration";
+            String query = "Select Id,Fullname,Email,PhoneNo,Address,Category,Username,Status From Registration";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -161,13 +162,13 @@ namespace Inventory_Mangaement
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Fname.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            EmailT.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            PhoneNoT.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            AddressT.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            CategoryT.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            UsernameT.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            PasswordT.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            Fname.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            EmailT.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            PhoneNoT.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            AddressT.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            CategoryT.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            UsernameT.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            PasswordT.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
           
         }
 
@@ -236,8 +237,12 @@ namespace Inventory_Mangaement
             string query = "insert into Registration (Fullname,Email,PhoneNo,Address,Category,Username,Password,ActivationCode,status) values ('" + Fname.Text + "','" + EmailT.Text + "','" + PhoneNoT.Text + "','" + AddressT.Text + "','" + CategoryT.Text + "','" + UsernameT.Text + "','" + PasswordT.Text + "','" + activationCode + "','Unverified')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
+            String query1 = "Select Id from Registration where Username ='"+UsernameT.Text+"' ";
+            SqlDataAdapter SDB = new SqlDataAdapter(query1, con);
+            SDB.SelectCommand.ExecuteNonQuery();
             con.Close();
             sendCode();
+            IDlabel.Show();
             
         }
         private void sendCode()
@@ -263,6 +268,11 @@ namespace Inventory_Mangaement
             {
                 throw;
             }
+        }
+
+        private void Fname_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

@@ -42,5 +42,12 @@ namespace Inventory_Mangaement
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+        }
     }
 }

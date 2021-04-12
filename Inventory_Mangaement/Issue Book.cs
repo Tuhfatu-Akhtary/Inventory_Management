@@ -22,7 +22,7 @@ namespace Inventory_Mangaement
         private void Submit_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "insert into BookIssue (PrsonName,PersonID,BookName,BookID,Date,Time) values ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "')";
+            string query = "insert into BookIssue (PrsonName,PersonID,BookName,BookID,IssueTime) values ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
  
@@ -38,9 +38,8 @@ namespace Inventory_Mangaement
             textBox3.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
-            textBox6.Text = "";
 
-            MessageBox.Show("Data inserted successfully");
+            MessageBox.Show("Book Issued successfully");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -112,6 +111,30 @@ namespace Inventory_Mangaement
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "Update BookIssue Set ReturnTime='"+textBox6.Text+"' where BookCode =''"+textBox4.Text+"";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+
+
+            string upquery = "Update Book_Entry Set Status='Available' where BookCode ='" + textBox4.Text + "'";
+            SqlDataAdapter SDB = new SqlDataAdapter(upquery, con);
+            SDB.SelectCommand.ExecuteNonQuery();
+
+
+            con.Close();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+
+            MessageBox.Show("Book Issued successfully");
         }
     }
 }

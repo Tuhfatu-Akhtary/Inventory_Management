@@ -99,13 +99,13 @@ namespace Inventory_Mangaement
 
         private void button1_Click_3(object sender, EventArgs e)
         {
-            if(DropDown.Height==274)
+            if(DropDown.Height==261)
             {
                 DropDown.Height = 37;
             }
             else
             {
-                DropDown.Height = 274;
+                DropDown.Height = 261;
             }
         }
 

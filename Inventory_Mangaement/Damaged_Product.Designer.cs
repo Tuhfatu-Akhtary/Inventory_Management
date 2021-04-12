@@ -33,9 +33,7 @@ namespace Inventory_Mangaement
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Submit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.QuantityDD = new System.Windows.Forms.TextBox();
             this.Pid = new System.Windows.Forms.TextBox();
-            this.QuantityD = new System.Windows.Forms.Label();
             this.Productid = new System.Windows.Forms.Label();
             this.Productname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,9 +54,7 @@ namespace Inventory_Mangaement
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.Submit);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.QuantityDD);
             this.panel1.Controls.Add(this.Pid);
-            this.panel1.Controls.Add(this.QuantityD);
             this.panel1.Controls.Add(this.Productid);
             this.panel1.Controls.Add(this.Productname);
             this.panel1.Controls.Add(this.label1);
@@ -71,7 +67,7 @@ namespace Inventory_Mangaement
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 324);
+            this.textBox1.Location = new System.Drawing.Point(215, 272);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(394, 22);
             this.textBox1.TabIndex = 23;
@@ -93,41 +89,24 @@ namespace Inventory_Mangaement
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 317);
+            this.label3.Location = new System.Drawing.Point(44, 272);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 29);
             this.label3.TabIndex = 14;
             this.label3.Text = "Entry Date";
             // 
-            // QuantityDD
-            // 
-            this.QuantityDD.Location = new System.Drawing.Point(215, 252);
-            this.QuantityDD.Name = "QuantityDD";
-            this.QuantityDD.Size = new System.Drawing.Size(394, 22);
-            this.QuantityDD.TabIndex = 12;
-            // 
             // Pid
             // 
-            this.Pid.Location = new System.Drawing.Point(215, 195);
+            this.Pid.Location = new System.Drawing.Point(215, 205);
             this.Pid.Name = "Pid";
             this.Pid.Size = new System.Drawing.Size(394, 22);
             this.Pid.TabIndex = 11;
-            // 
-            // QuantityD
-            // 
-            this.QuantityD.AutoSize = true;
-            this.QuantityD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityD.Location = new System.Drawing.Point(42, 252);
-            this.QuantityD.Name = "QuantityD";
-            this.QuantityD.Size = new System.Drawing.Size(100, 29);
-            this.QuantityD.TabIndex = 10;
-            this.QuantityD.Text = "Quantity";
             // 
             // Productid
             // 
             this.Productid.AutoSize = true;
             this.Productid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Productid.Location = new System.Drawing.Point(42, 195);
+            this.Productid.Location = new System.Drawing.Point(44, 205);
             this.Productid.Name = "Productid";
             this.Productid.Size = new System.Drawing.Size(125, 29);
             this.Productid.TabIndex = 8;
@@ -273,9 +252,7 @@ namespace Inventory_Mangaement
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox QuantityDD;
         private System.Windows.Forms.TextBox Pid;
-        private System.Windows.Forms.Label QuantityD;
         private System.Windows.Forms.Label Productid;
         private System.Windows.Forms.Label Productname;
         private System.Windows.Forms.Label label1;

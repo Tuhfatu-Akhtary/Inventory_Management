@@ -31,6 +31,7 @@ namespace Inventory_Mangaement
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +61,22 @@ namespace Inventory_Mangaement
             this.label1.TabIndex = 1;
             this.label1.Text = "Product List";
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(26, 24);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(47, 31);
+            this.button9.TabIndex = 57;
+            this.button9.Text = "←";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Product_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 654);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Product_List";
@@ -80,5 +92,6 @@ namespace Inventory_Mangaement
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button9;
     }
 }

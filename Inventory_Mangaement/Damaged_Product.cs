@@ -30,13 +30,13 @@ namespace Inventory_Mangaement
         private void Submit_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "insert into Damaged_Product (Product_Name,Product_ID,Quantity,EntryDate) values ('" + Pname.Text + "','" + Pid.Text + "','" + QuantityDD.Text + "','" + textBox1.Text + "')";
+            string query = "insert into Damaged_Product (Product_Name,Product_ID,EntryDate) values ('" + Pname.Text + "','" + Pid.Text + "','" + textBox1.Text + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
             Pname.Text = "";
             Pid.Text = "";
-            QuantityDD.Text = "";
+            
             textBox1.Text = "";
 
             MessageBox.Show("Data inserted successfully");
@@ -57,13 +57,13 @@ namespace Inventory_Mangaement
         private void button3_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "Update Damaged_Product SET Product_Name = '" + Pname.Text + "',Quantity ='" + QuantityDD.Text + "',EntryDate = '" + textBox1.Text + "' Where Product_ID ='" + Pid.Text + "'";
+            String query = "Update Damaged_Product SET Product_Name = '" + Pname.Text + "',EntryDate = '" + textBox1.Text + "' Where Product_ID ='" + Pid.Text + "'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
             Pname.Text = "";
             Pid.Text = "";
-            QuantityDD.Text = "";
+          
             textBox1.Text = "";
             MessageBox.Show("Data updated successfully");
         }
@@ -72,8 +72,8 @@ namespace Inventory_Mangaement
         {
             Pname.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             Pid.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            QuantityDD.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace Inventory_Mangaement
             con.Close();
             Pname.Text = "";
             Pid.Text = "";
-            QuantityDD.Text = "";
+  
             textBox1.Text = "";
             MessageBox.Show("Record Succussfully Deleted");
         }

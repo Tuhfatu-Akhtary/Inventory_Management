@@ -190,7 +190,7 @@ namespace Inventory_Mangaement
             this.DropDown.Controls.Add(this.button1);
             this.DropDown.Location = new System.Drawing.Point(1054, 119);
             this.DropDown.Name = "DropDown";
-            this.DropDown.Size = new System.Drawing.Size(195, 274);
+            this.DropDown.Size = new System.Drawing.Size(195, 261);
             this.DropDown.TabIndex = 6;
             this.DropDown.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -232,7 +232,7 @@ namespace Inventory_Mangaement
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(189, 37);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Manage Stock";
+            this.button3.Text = "Product Entry";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
