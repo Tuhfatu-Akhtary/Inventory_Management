@@ -106,5 +106,10 @@ namespace Inventory_Mangaement
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

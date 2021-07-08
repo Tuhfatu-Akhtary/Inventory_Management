@@ -135,6 +135,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>inventory_managementdbDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="inventory_managementdbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventory_managementdbDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Issue Book.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,11 +158,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Stock.cs">
+    <Compile Include="Product Entry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Stock.Designer.cs">
-      <DependentUpon>Manage Stock.cs</DependentUpon>
+    <Compile Include="Product Entry.Designer.cs">
+      <DependentUpon>Product Entry.cs</DependentUpon>
     </Compile>
     <Compile Include="Products Report.cs">
       <SubType>Form</SubType>
@@ -233,8 +238,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Stock.resx">
-      <DependentUpon>Manage Stock.cs</DependentUpon>
+    <EmbeddedResource Include="Product Entry.resx">
+      <DependentUpon>Product Entry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products Report.resx">
       <DependentUpon>Products Report.cs</DependentUpon>
@@ -294,6 +299,17 @@
     </None>
     <None Include="inventory_managementdbDataSet2.xss">
       <DependentUpon>inventory_managementdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="inventory_managementdbDataSet3.xsc">
+      <DependentUpon>inventory_managementdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="inventory_managementdbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>inventory_managementdbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inventory_managementdbDataSet3.xss">
+      <DependentUpon>inventory_managementdbDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

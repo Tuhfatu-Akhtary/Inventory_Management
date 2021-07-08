@@ -51,7 +51,7 @@ namespace Inventory_Mangaement
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Progress.Width += 5;
+            Progress.Width += 3;
             if (Progress.Width > 731)
             {
                 timer1.Stop();
@@ -63,6 +63,11 @@ namespace Inventory_Mangaement
         }
 
         private void Splash1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

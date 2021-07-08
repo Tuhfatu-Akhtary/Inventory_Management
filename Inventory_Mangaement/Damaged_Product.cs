@@ -18,7 +18,7 @@ namespace Inventory_Mangaement
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=inventory_managementdb;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-8Q203MR;Initial Catalog=inventory_managementdb;Integrated Security=True");
 
         private void button2_Click(object sender, EventArgs e)
         {

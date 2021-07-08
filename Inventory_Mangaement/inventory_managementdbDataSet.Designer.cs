@@ -285,8 +285,6 @@ namespace Inventory_Mangaement {
             
             private global::System.Data.DataColumn columnProduct_ID;
             
-            private global::System.Data.DataColumn columnQuantity;
-            
             private global::System.Data.DataColumn columnEntryDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -348,14 +346,6 @@ namespace Inventory_Mangaement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn QuantityColumn {
-                get {
-                    return this.columnQuantity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn EntryDateColumn {
                 get {
                     return this.columnEntryDate;
@@ -399,13 +389,12 @@ namespace Inventory_Mangaement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Damaged_ProductRow AddDamaged_ProductRow(string Product_Name, string Product_ID, string Quantity, string EntryDate) {
+            public Damaged_ProductRow AddDamaged_ProductRow(string Product_Name, string Product_ID, string EntryDate) {
                 Damaged_ProductRow rowDamaged_ProductRow = ((Damaged_ProductRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Product_Name,
                         Product_ID,
-                        Quantity,
                         EntryDate};
                 rowDamaged_ProductRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDamaged_ProductRow);
@@ -439,7 +428,6 @@ namespace Inventory_Mangaement {
                 this.columnId = base.Columns["Id"];
                 this.columnProduct_Name = base.Columns["Product_Name"];
                 this.columnProduct_ID = base.Columns["Product_ID"];
-                this.columnQuantity = base.Columns["Quantity"];
                 this.columnEntryDate = base.Columns["EntryDate"];
             }
             
@@ -452,8 +440,6 @@ namespace Inventory_Mangaement {
                 base.Columns.Add(this.columnProduct_Name);
                 this.columnProduct_ID = new global::System.Data.DataColumn("Product_ID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProduct_ID);
-                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQuantity);
                 this.columnEntryDate = new global::System.Data.DataColumn("EntryDate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEntryDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -468,8 +454,6 @@ namespace Inventory_Mangaement {
                 this.columnProduct_ID.AllowDBNull = false;
                 this.columnProduct_ID.Unique = true;
                 this.columnProduct_ID.MaxLength = 50;
-                this.columnQuantity.AllowDBNull = false;
-                this.columnQuantity.MaxLength = 50;
                 this.columnEntryDate.AllowDBNull = false;
                 this.columnEntryDate.MaxLength = 50;
             }
@@ -647,17 +631,6 @@ namespace Inventory_Mangaement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Quantity {
-                get {
-                    return ((string)(this[this.tableDamaged_Product.QuantityColumn]));
-                }
-                set {
-                    this[this.tableDamaged_Product.QuantityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string EntryDate {
                 get {
                     return ((string)(this[this.tableDamaged_Product.EntryDateColumn]));
@@ -830,42 +803,38 @@ namespace Inventory_Mangaement.inventory_managementdbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Product_Name", "Product_Name");
             tableMapping.ColumnMappings.Add("Product_ID", "Product_ID");
-            tableMapping.ColumnMappings.Add("Quantity", "Quantity");
             tableMapping.ColumnMappings.Add("EntryDate", "EntryDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Damaged_Product] WHERE (([Id] = @Original_Id) AND ([Product_Na" +
-                "me] = @Original_Product_Name) AND ([Product_ID] = @Original_Product_ID) AND ([Qu" +
-                "antity] = @Original_Quantity) AND ([EntryDate] = @Original_EntryDate))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Damaged_Product] WHERE (([Id] = @Original_Id) AND ([Product_Name] = " +
+                "@Original_Product_Name) AND ([Product_ID] = @Original_Product_ID) AND ([EntryDat" +
+                "e] = @Original_EntryDate))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EntryDate", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EntryDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Damaged_Product] ([Product_Name], [Product_ID], [Quantity], [EntryDate]) VALUES (@Product_Name, @Product_ID, @Quantity, @EntryDate);
-SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WHERE (Product_ID = @Product_ID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Damaged_Product] ([Product_Name], [Product_ID], [EntryDate]) VALUES " +
+                "(@Product_Name, @Product_ID, @EntryDate);\r\nSELECT Id, Product_Name, Product_ID, " +
+                "EntryDate FROM Damaged_Product WHERE (Product_ID = @Product_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EntryDate", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EntryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Damaged_Product] SET [Product_Name] = @Product_Name, [Product_ID] = @Product_ID, [Quantity] = @Quantity, [EntryDate] = @EntryDate WHERE (([Id] = @Original_Id) AND ([Product_Name] = @Original_Product_Name) AND ([Product_ID] = @Original_Product_ID) AND ([Quantity] = @Original_Quantity) AND ([EntryDate] = @Original_EntryDate));
-SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WHERE (Product_ID = @Product_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Damaged_Product] SET [Product_Name] = @Product_Name, [Product_ID] = @Product_ID, [EntryDate] = @EntryDate WHERE (([Id] = @Original_Id) AND ([Product_Name] = @Original_Product_Name) AND ([Product_ID] = @Original_Product_ID) AND ([EntryDate] = @Original_EntryDate));
+SELECT Id, Product_Name, Product_ID, EntryDate FROM Damaged_Product WHERE (Product_ID = @Product_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EntryDate", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EntryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_ID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EntryDate", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EntryDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -882,8 +851,7 @@ SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WH
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM dbo.Damaged_Product" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT Id, Product_Name, Product_ID, EntryDate FROM Damaged_Product";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -944,7 +912,7 @@ SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Product_Name, string Original_Product_ID, string Original_Quantity, string Original_EntryDate) {
+        public virtual int Delete(int Original_Id, string Original_Product_Name, string Original_Product_ID, string Original_EntryDate) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Product_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Product_Name");
@@ -958,17 +926,11 @@ SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WH
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Product_ID));
             }
-            if ((Original_Quantity == null)) {
-                throw new global::System.ArgumentNullException("Original_Quantity");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Quantity));
-            }
             if ((Original_EntryDate == null)) {
                 throw new global::System.ArgumentNullException("Original_EntryDate");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_EntryDate));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_EntryDate));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -990,7 +952,7 @@ SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Product_Name, string Product_ID, string Quantity, string EntryDate) {
+        public virtual int Insert(string Product_Name, string Product_ID, string EntryDate) {
             if ((Product_Name == null)) {
                 throw new global::System.ArgumentNullException("Product_Name");
             }
@@ -1003,17 +965,11 @@ SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WH
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Product_ID));
             }
-            if ((Quantity == null)) {
-                throw new global::System.ArgumentNullException("Quantity");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Quantity));
-            }
             if ((EntryDate == null)) {
                 throw new global::System.ArgumentNullException("EntryDate");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(EntryDate));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(EntryDate));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1035,7 +991,7 @@ SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Product_Name, string Product_ID, string Quantity, string EntryDate, int Original_Id, string Original_Product_Name, string Original_Product_ID, string Original_Quantity, string Original_EntryDate) {
+        public virtual int Update(string Product_Name, string Product_ID, string EntryDate, int Original_Id, string Original_Product_Name, string Original_Product_ID, string Original_EntryDate) {
             if ((Product_Name == null)) {
                 throw new global::System.ArgumentNullException("Product_Name");
             }
@@ -1048,42 +1004,30 @@ SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WH
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Product_ID));
             }
-            if ((Quantity == null)) {
-                throw new global::System.ArgumentNullException("Quantity");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Quantity));
-            }
             if ((EntryDate == null)) {
                 throw new global::System.ArgumentNullException("EntryDate");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(EntryDate));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(EntryDate));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
             if ((Original_Product_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Product_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Product_Name));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Product_Name));
             }
             if ((Original_Product_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_Product_ID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Product_ID));
-            }
-            if ((Original_Quantity == null)) {
-                throw new global::System.ArgumentNullException("Original_Quantity");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Quantity));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Product_ID));
             }
             if ((Original_EntryDate == null)) {
                 throw new global::System.ArgumentNullException("Original_EntryDate");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_EntryDate));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_EntryDate));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1105,8 +1049,8 @@ SELECT Id, Product_Name, Product_ID, Quantity, EntryDate FROM Damaged_Product WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Product_Name, string Quantity, string EntryDate, int Original_Id, string Original_Product_Name, string Original_Product_ID, string Original_Quantity, string Original_EntryDate) {
-            return this.Update(Product_Name, Original_Product_ID, Quantity, EntryDate, Original_Id, Original_Product_Name, Original_Product_ID, Original_Quantity, Original_EntryDate);
+        public virtual int Update(string Product_Name, string EntryDate, int Original_Id, string Original_Product_Name, string Original_Product_ID, string Original_EntryDate) {
+            return this.Update(Product_Name, Original_Product_ID, EntryDate, Original_Id, Original_Product_Name, Original_Product_ID, Original_EntryDate);
         }
     }
     

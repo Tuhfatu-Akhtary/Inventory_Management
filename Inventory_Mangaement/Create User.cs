@@ -16,7 +16,7 @@ namespace Inventory_Mangaement
     public partial class Create_User : Form
     {
         static string activationCode;
-        SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=inventory_managementdb;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-8Q203MR;Initial Catalog=inventory_managementdb;Integrated Security=True");
         public Create_User()
         {
             InitializeComponent();

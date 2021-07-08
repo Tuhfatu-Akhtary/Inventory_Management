@@ -14,7 +14,7 @@ namespace Inventory_Mangaement
 {
     public partial class Manage_Stock : Form
     {
-        SqlConnection con = new SqlConnection (@"Data Source=.\sqlexpress;Initial Catalog=inventory_managementdb;Integrated Security=True");
+        SqlConnection con = new SqlConnection (@"Data Source=DESKTOP-8Q203MR;Initial Catalog=inventory_managementdb;Integrated Security=True");
         public Manage_Stock()
         {
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace Inventory_Mangaement
         private void button4_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "Select * From Manage_Stock";
+            String query = "Select Id,ItemName,Quantity,Price,PurchaseDate,EntryDate From Manage_Stock";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
