@@ -119,6 +119,7 @@ namespace Inventory_Mangaement
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(394, 22);
             this.Quantity.TabIndex = 12;
+            this.Quantity.TextChanged += new System.EventHandler(this.Quantity_TextChanged);
             // 
             // PhoneNo
             // 

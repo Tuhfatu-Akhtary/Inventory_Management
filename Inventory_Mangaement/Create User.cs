@@ -125,7 +125,7 @@ namespace Inventory_Mangaement
         private void View_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "Select Id,Fullname,Email,PhoneNo,Address,Category,Username,Status From Registration";
+            String query = "Select Fullname,Email,PhoneNo,Address,Category,Username,Status From Registration";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -150,6 +150,7 @@ namespace Inventory_Mangaement
             PhoneNoT.Text = "";
             AddressT.Text = "";
             CategoryT.Text = "";
+            UsernameT.Text = "";
             PasswordT.Text = "";
 
             MessageBox.Show("Data updated successfully");
@@ -168,7 +169,7 @@ namespace Inventory_Mangaement
             AddressT.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             CategoryT.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             UsernameT.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
-            PasswordT.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+     
           
         }
 
@@ -240,6 +241,7 @@ namespace Inventory_Mangaement
             String query1 = "Select Id from Registration where Username ='"+UsernameT.Text+"' ";
             SqlDataAdapter SDB = new SqlDataAdapter(query1, con);
             SDB.SelectCommand.ExecuteNonQuery();
+            
             con.Close();
             sendCode();
             IDlabel.Show();

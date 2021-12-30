@@ -358,5 +358,8 @@
   <ItemGroup>
     <None Include="Resources\cat.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="user\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

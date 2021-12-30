@@ -25,7 +25,7 @@ namespace Inventory_Mangaement
         {
             SqlConnection con = new SqlConnection(cs);
             con.Open();
-            String query = "Select ItemName As ProductName,ItemCode As ProductCode,Quantity As Quantity From Manage_Stock";
+            String query = "Select ProductName,Quantity From Product_List";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);

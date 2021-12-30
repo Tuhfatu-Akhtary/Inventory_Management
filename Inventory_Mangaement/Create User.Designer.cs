@@ -31,6 +31,7 @@ namespace Inventory_Mangaement
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.IDlabel = new System.Windows.Forms.Label();
             this.SendEmail = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.Show1 = new System.Windows.Forms.Button();
@@ -59,8 +60,6 @@ namespace Inventory_Mangaement
             this.label2 = new System.Windows.Forms.Label();
             this.Edit = new System.Windows.Forms.Button();
             this.View = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.IDlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +76,6 @@ namespace Inventory_Mangaement
             // panel1
             // 
             this.panel1.Controls.Add(this.IDlabel);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.SendEmail);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.Show1);
@@ -105,6 +103,15 @@ namespace Inventory_Mangaement
             this.panel1.Size = new System.Drawing.Size(680, 790);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // IDlabel
+            // 
+            this.IDlabel.AutoSize = true;
+            this.IDlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDlabel.Location = new System.Drawing.Point(183, 83);
+            this.IDlabel.Name = "IDlabel";
+            this.IDlabel.Size = new System.Drawing.Size(0, 29);
+            this.IDlabel.TabIndex = 29;
             // 
             // SendEmail
             // 
@@ -411,25 +418,6 @@ namespace Inventory_Mangaement
             this.View.UseVisualStyleBackColor = false;
             this.View.Click += new System.EventHandler(this.View_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(42, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 29);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Person ID:";
-            // 
-            // IDlabel
-            // 
-            this.IDlabel.AutoSize = true;
-            this.IDlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDlabel.Location = new System.Drawing.Point(183, 83);
-            this.IDlabel.Name = "IDlabel";
-            this.IDlabel.Size = new System.Drawing.Size(0, 29);
-            this.IDlabel.TabIndex = 29;
-            // 
             // Create_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,6 +476,5 @@ namespace Inventory_Mangaement
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button SendEmail;
         private System.Windows.Forms.Label IDlabel;
-        private System.Windows.Forms.Label label7;
     }
 }

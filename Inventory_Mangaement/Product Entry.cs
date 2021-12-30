@@ -36,16 +36,18 @@ namespace Inventory_Mangaement
             string query = "insert into Manage_Stock (ItemName,Quantity,Price,PurchaseDate,EntryDate) values ('"+itemname.Text+"','"+Quantity.Text+"','"+Price.Text+"','"+ textBox1.Text+ "','" + textBox2.Text + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
-            con.Close();
+           
             itemname.Text = "";
             Quantity.Text = "";
             Price.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
 
-
-
             MessageBox.Show("Data inserted successfully");
+            string query1 = "Insert into Product_List (ProductName,Quantity) Select ItemName,Quantity from Manage_Stock";
+            SqlDataAdapter cmd = new SqlDataAdapter(query1, con);
+            cmd.SelectCommand.ExecuteNonQuery();
+            con.Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -119,6 +121,11 @@ namespace Inventory_Mangaement
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Quantity_TextChanged(object sender, EventArgs e)
         {
 
         }
